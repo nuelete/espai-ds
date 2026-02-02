@@ -1,0 +1,307 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ============================================
+     ESPAI DESIGN SYSTEM — COLOR TOKENS
+     ============================================ */
+  
+  /* Neutrals — the foundation (90% of the UI) */
+  --espai-neutral-900: #1C2330;
+  --espai-neutral-800: #2A3242;
+  --espai-neutral-700: #3A4358;
+  --espai-neutral-600: #5B6478;
+  --espai-neutral-500: #7D8699;
+  --espai-neutral-400: #A2AABC;
+  --espai-neutral-300: #C9CFDA;
+  --espai-neutral-200: #E4E7EE;
+  --espai-neutral-100: #F2F4F8;
+  --espai-neutral-050: #F8F9FB;
+
+  /* Primary Accent — "Focus Blue" */
+  --espai-focus-600: #3B6EEA;
+  --espai-focus-500: #5A86F2;
+  --espai-focus-400: #8CA8F7;
+  --espai-focus-300: #C4D3FB;
+
+  /* Supportive Secondary — "Calm Teal" */
+  --espai-support-600: #2F8F83;
+  --espai-support-500: #4FA89C;
+  --espai-support-400: #8BC6BC;
+  --espai-support-300: #CFEAE6;
+
+  /* Soft Signal — "Attention without alarm" */
+  --espai-signal-600: #C08A3E;
+  --espai-signal-500: #D1A15A;
+  --espai-signal-400: #E4C690;
+  --espai-signal-300: #F3E7CC;
+
+  /* Critical (rare) — "Measured Red" */
+  --espai-critical-600: #B94A48;
+  --espai-critical-500: #D16A67;
+  --espai-critical-400: #E7A3A1;
+  --espai-critical-300: #F4D6D5;
+
+  /* ============================================
+     SEMANTIC ALIASES
+     ============================================ */
+  
+  /* Backgrounds */
+  --bg-default: var(--espai-neutral-050);
+  --bg-surface: #FFFFFF;
+  
+  /* Text */
+  --text-primary: var(--espai-neutral-900);
+  --text-secondary: var(--espai-neutral-700);
+  --text-muted: var(--espai-neutral-500);
+
+  /* Borders */
+  --border-subtle: var(--espai-neutral-200);
+
+  /* Actions */
+  --action-primary: var(--espai-focus-600);
+  --action-secondary: var(--espai-support-600);
+
+  /* States */
+  --state-warning: var(--espai-signal-600);
+  --state-critical: var(--espai-critical-600);
+
+  /* ============================================
+     TYPOGRAPHY SCALE
+     ============================================ */
+  
+  --text-xs: 0.75rem;   /* 12px - metadata */
+  --text-sm: 0.875rem;  /* 14px - labels */
+  --text-md: 1rem;      /* 16px - body */
+  --text-lg: 1.125rem;  /* 18px - emphasis */
+  --text-xl: 1.375rem;  /* 22px - section headers */
+  --text-2xl: 1.75rem;  /* 28px - insight headlines */
+  --text-3xl: 2.25rem;  /* 36px - page titles */
+
+  /* Font Families */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* ============================================
+     LEGACY COMPATIBILITY (for existing components)
+     ============================================ */
+  
+  --font-size: 16px;
+  --background: var(--bg-surface);
+  --foreground: var(--text-primary);
+  --card: var(--bg-surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--bg-surface);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--action-primary);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--espai-neutral-100);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--espai-neutral-100);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--espai-focus-300);
+  --accent-foreground: var(--text-primary);
+  --destructive: var(--state-critical);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--border-subtle);
+  --input: transparent;
+  --input-background: var(--espai-neutral-100);
+  --switch-background: var(--espai-neutral-300);
+  --ring: var(--espai-focus-600);
+  --radius: 0.5rem;
+  
+  /* Sidebar compatibility */
+  --sidebar: var(--bg-surface);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--action-primary);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--espai-neutral-100);
+  --sidebar-accent-foreground: var(--text-primary);
+  --sidebar-border: var(--border-subtle);
+  --sidebar-ring: var(--espai-focus-600);
+}
+
+@theme inline {
+  /* Espai Color Utilities */
+  --color-espai-neutral-900: var(--espai-neutral-900);
+  --color-espai-neutral-800: var(--espai-neutral-800);
+  --color-espai-neutral-700: var(--espai-neutral-700);
+  --color-espai-neutral-600: var(--espai-neutral-600);
+  --color-espai-neutral-500: var(--espai-neutral-500);
+  --color-espai-neutral-400: var(--espai-neutral-400);
+  --color-espai-neutral-300: var(--espai-neutral-300);
+  --color-espai-neutral-200: var(--espai-neutral-200);
+  --color-espai-neutral-100: var(--espai-neutral-100);
+  --color-espai-neutral-050: var(--espai-neutral-050);
+
+  --color-espai-focus-600: var(--espai-focus-600);
+  --color-espai-focus-500: var(--espai-focus-500);
+  --color-espai-focus-400: var(--espai-focus-400);
+  --color-espai-focus-300: var(--espai-focus-300);
+
+  --color-espai-support-600: var(--espai-support-600);
+  --color-espai-support-500: var(--espai-support-500);
+  --color-espai-support-400: var(--espai-support-400);
+  --color-espai-support-300: var(--espai-support-300);
+
+  --color-espai-signal-600: var(--espai-signal-600);
+  --color-espai-signal-500: var(--espai-signal-500);
+  --color-espai-signal-400: var(--espai-signal-400);
+  --color-espai-signal-300: var(--espai-signal-300);
+
+  --color-espai-critical-600: var(--espai-critical-600);
+  --color-espai-critical-500: var(--espai-critical-500);
+  --color-espai-critical-400: var(--espai-critical-400);
+  --color-espai-critical-300: var(--espai-critical-300);
+
+  /* Legacy compatibility colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[var(--bg-default)] text-[var(--text-primary)];
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-normal);
+  }
+
+  /**
+  * Espai Typography Rules
+  * - No all-caps (ever)
+  * - No bold paragraphs
+  * - Headlines ≠ labels (write sentences, not nouns)
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+
+  label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  button {
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+}
+
+/* ============================================
+   ESPAI UTILITY CLASSES
+   ============================================ */
+
+.espai-metric {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.espai-insight-headline {
+  font-family: var(--font-display);
+  line-height: 1.3;
+}
+
+.espai-body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
